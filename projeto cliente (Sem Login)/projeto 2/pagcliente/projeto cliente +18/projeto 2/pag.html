@@ -20,6 +20,137 @@
         -moz-user-select: none;
         user-select: none;
       }
+
+      .picture-box {
+        width: 70px;
+        height: 70px;
+        background-color: #ccc;
+        border-radius: 50%; /* Torna a picture box redonda */
+        position: absolute;
+        /*top: 40px; /* Posiciona a picture box acima do usuário */
+        right: 70px; /* Ajusta o posicionamento horizontal */
+        z-index: 1; /* Garante que a picture box esteja acima do conteúdo da header */
+    }
+    .picture-box h2 {
+        padding: 10px;
+        font-family: Arial, sans-serif;
+        margin-top: 50px; /* Posiciona a picture box acima do usuário */
+        margin-left: -20px; /* Ajusta o posicionamento horizontal */
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+    }
+    .picture-box img {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        margin: auto; /* Centraliza a imagem */
+        overflow: hidden; /* Garante que a imagem fique dentro da picture box */
+    }
+
+
+    .profile {
+        padding: 20px; /* Adiciona espaçamento interno */
+        text-decoration: none;
+    }
+
+    .profile a {
+        text-decoration: none;
+        color: #333;
+    }
+
+
+    .popup {
+        display: none;
+        position: absolute;
+        top: calc(30% + 10px); /* Posiciona o pop-up abaixo do avatar */
+        margin-left: 85%; /* Alinha o pop-up à direita */
+        margin-top: -50px;
+        background-color: #d8d8d8;
+        padding: 20px;
+        border: 1px solid #353535;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .btn-round {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.2);
+        color: #fff;
+        padding: 20px;
+        margin-top: 280px;
+        width: 20px;
+        border-radius: 500%;
+        text-decoration: none;
+        justify-content: center;
+        margin-left: 900px;
+        transition: background-color 0.3s;
+    }
+
+    .btn-round a:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }  
+    
+  </style>
+   
+</head>
+<body>
+    <header>
+        <h1>Studio de Tatuagem</h1>
+
+        <div class="picture-box">
+            <img src="user.jpg" id="user-img" onclick="togglePopup()">
+            <h2>Usuário</h2>
+        </div>
+
+        <div class="profile">
+            <div class="popup" id="popup">
+                <a href="config.html">Configurações</a>
+                <br>
+                
+                <br>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+    <script>
+        function togglePopup() {
+            var popup = document.getElementById("popup");
+            if (popup.style.display === "block") {
+                popup.style.display = "none";
+            } else {
+                popup.style.display = "block";
+                // Adiciona um ouvinte de evento de clique ao documento inteiro
+                document.addEventListener("click", closePopup);
+                // Evita que o clique na imagem do usuário feche o pop-up imediatamente
+                event.stopPropagation();
+            }
+        }
+        
+        function closePopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "none";
+            // Remove o ouvinte de evento de clique do documento
+            document.removeEventListener("click", closePopup);
+        }
+        </script>
+
+    <style>
+      body {
+        padding-top: 3rem;
+      }
+      .starter-template {
+        padding: 3rem 1.5rem;
+        text-align: center;
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
     </style>
   </head>
   <body>
@@ -45,8 +176,7 @@
               <a class="nav-link" href="paginaagend.html">Agenda</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <a class="btn btn-outline-success" href="login.html">Login</a>
+        
           </form>
         </div>
       </div>

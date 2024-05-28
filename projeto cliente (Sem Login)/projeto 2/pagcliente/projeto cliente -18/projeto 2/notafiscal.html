@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nota Fiscal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      width: 800px;
+      margin: 0 auto;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .company-info, .customer-info, .items, .total {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    .company-info h2, .customer-info h2, .items h2, .total h2 {
+      margin-top: 0;
+    }
+    .item-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    .item-row span {
+      flex-basis: 30%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Nota Fiscal</h1>
+    </div>
+    <div class="company-info">
+      <h2>Informações da Empresa</h2>
+      <p>Razão Social: Empresa Exemplo</p>
+      <p>CNPJ: 00.000.000/0000-00</p>
+      <p>Endereço: Av. Exemplo, 123 - Cidade Exemplo</p>
+    </div>
+    <div class="customer-info">
+      <h2>Informações do Cliente</h2>
+      <p>Nome: Cliente Exemplo</p>
+      <p>CPF/CNPJ: 000.000.000-00</p>
+      <p>Endereço: Rua Exemplo, 456 - Bairro Exemplo</p>
+    </div>
+    <div class="items">
+      <h2>Itens da Nota Fiscal</h2>
+      <div class="item-row">
+        <span>Produto</span>
+        <span>Quantidade</span>
+        <span>Valor Unitário</span>
+        <span>Subtotal</span>
+      </div>
+      <div class="item-row">
+        <span>Produto 1</span>
+        <span>2</span>
+        <span>R$ 10,00</span>
+        <span>R$ 20,00</span>
+      </div>
+      <div class="item-row">
+        <span>Produto 2</span>
+        <span>1</span>
+        <span>R$ 15,00</span>
+        <span>R$ 15,00</span>
+      </div>
+    </div>
+    <div class="total">
+      <h2>Total</h2>
+      <p>Total a Pagar: R$ 35,00</p>
+    </div>
+  </div>
+</body>
+</html>

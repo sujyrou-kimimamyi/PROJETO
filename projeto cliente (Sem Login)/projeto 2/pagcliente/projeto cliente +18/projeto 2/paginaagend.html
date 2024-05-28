@@ -95,8 +95,13 @@
       cursor: pointer;
     }
     td.booked {
-      background-color: #fff588; /* Vermelho para horários reservados */
+      background-color: #ff8888; /* Vermelho para horários reservados */
     }
+    td.booked2 {
+      background-color: #f8f096; /* Vermelho para horários reservados */
+      
+    }
+    
     td.selected {
       background-color: #007bff; /* Azul para horários selecionados */
       color: #fff;
@@ -161,7 +166,7 @@
           <td>Maio</td>
           <td>13</td>
           <td>Segunda-Feira</td>
-          <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2009:00" target="_blank">Disponível</a></td>
+          <td class="booked" onclick="reserve(this)"><a>Indisponível</a></td>
           <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2010:00" target="_blank">Disponível</a></td>
           <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2011:00" target="_blank">Disponível</a></td>
           <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2012:00" target="_blank">Disponível</a></td>
@@ -176,15 +181,56 @@
             <td>14</td>
             <td>Terça-Feira</td>
          
-            <td class="available" onclick="reserve(this)">Disponível</td>
-            <td class="available" onclick="reserve(this)">Disponível</td>
-            <td class="available" onclick="reserve(this)">Disponível</td>
-            <td class="available" onclick="reserve(this)">Disponível</td>
-            <td class="available" onclick="reserve(this)">Disponível</td>
-            <td class="available" onclick="reserve(this)">Disponível</td>
-            <td class="available" onclick="reserve(this)">Disponível</td>
-            <td class="available" onclick="reserve(this)">Disponível</td>
-            <td class="available" onclick="reserve(this)">Disponível</td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2009:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2010:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2011:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2012:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2013:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2014:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2015:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2016:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2017:00" target="_blank">Disponível</a></td>
+            </tr>
+            <td>Maio</td>
+            <td>15</td>
+            <td>Quarta-Feira</td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2009:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2010:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2011:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2012:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2013:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2014:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2015:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2016:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2017:00" target="_blank">Disponível</a></td>
+            </tr>
+            
+            <td>Maio</td>
+            <td>16</td>
+            <td>Quinta-Feira</td>
+         
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2009:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2010:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2011:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2012:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2013:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2014:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2015:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2016:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2017:00" target="_blank">Disponível</a></td>
+            </tr>
+            <td>Maio</td>
+            <td>17</td>
+            <td>Sexta-Feira</td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2009:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2010:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2011:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2012:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2013:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2014:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2015:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2016:00" target="_blank">Disponível</a></td>
+            <td class="available" onclick="reserve(this)"><a href="https://wa.me/12996701986?text=Gostaria%20de%20reservar%20o%20horário%20das%2017:00" target="_blank">Disponível</a></td>
             </tr>
       </tbody>
     </table>
@@ -200,6 +246,7 @@
         // Marca a célula como reservada e define o texto como "Indisponível"
         cell.classList.remove('available');
         cell.classList.add('booked');
+        cell.classList.add('booked2');
         cell.innerText = 'Pendente';
 
         // Aqui você pode adicionar a lógica para reservar o horário selecionado
