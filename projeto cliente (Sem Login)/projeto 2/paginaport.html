@@ -21,6 +21,30 @@
         user-select: none;
       }
     </style>
+     <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 0;
+      }
+      .portfolio-item {
+          margin-bottom: 30px;
+      }
+      .portfolio-item img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      header {
+          background: #333;
+          color: #fff;
+          padding: 20px 0;
+          text-align: center;
+          margin-bottom: 30px;
+      }
+  </style>
   </head>
   <body>
     
@@ -42,35 +66,43 @@
               <a class="nav-link" href="paginacontato.html">Contato</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="login.html">Agenda (faça login para acessar)</a>
+              <a class="nav-link" href="paginalogin.html">Agenda (faça login para acessar)</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
-            <a class="btn btn-outline-success" href="login.html">Login</a>
+            
           </form>
         </div>
       </div>
     </nav>
-</head>
-    <section>
-        <h2>Confira o nosso portfólio</h2>
-        <p>Somos especialistas em arte corporal personalizada.</p>
-        <p>Confira nosso portfólio para ver trabalhos incríveis!</p>
-        <a href="#">Ver Portfólio</a>
-    </section>
-    <section>
-        <h2>Nossos Serviços</h2>
-        <ul>
-            <li>Tatuagens personalizadas</li>
-            <li>Retoque de tatuagens</li>
-            <li>Cobertura de tatuagens antigas</li>
-            <li>Remoção de tatuagens</li>
-        </ul>
-        <p>Entre em contato para agendar sua consulta!</p>
-        <a href="login.html">Agendar Consulta</a>
-    </section>
-    <footer>
-        &copy; <?php echo date("Y"); ?> Studio de Tatuagem. Todos os direitos reservados.
-    </footer>
+</header>
+<div class="container">
+  <div class="row">
+      <div class="col-md-4 portfolio-item">
+          <img src="port1.jpeg" alt="Tatuagem 1">
+      </div>
+      <div class="col-md-4 portfolio-item">
+          <img src="port2.jpeg" alt="Tatuagem 2">
+      </div>
+      <div class="col-md-4 portfolio-item">
+          <img src="port3.jpeg" alt="Tatuagem 3">
+      </div>
+      <div class="col-md-4 portfolio-item">
+          <img src="port4.jpeg" alt="Tatuagem 4">
+      </div>
+      <div class="col-md-4 portfolio-item">
+          <img src="port5.jpeg" alt="Tatuagem 5">
+      </div>
+      <div class="col-md-4 portfolio-item">
+          <img src="port6.jpeg" alt="Tatuagem 6">
+      </div>
+      <!-- Adicione mais imagens conforme necessário -->
+  </div>
+</div>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </body>
 </html>
