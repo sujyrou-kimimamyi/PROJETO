@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financeiro</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        canvas {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <script>
+        // Função para calcular o lucro
+        function calcularLucro() {
+            // Obter os valores das entradas
+            var despesasMateriais = parseFloat(document.getElementById("despesasMateriais").value);
+            var despesasAluguel = parseFloat(document.getElementById("despesasAluguel").value);
+            var despesasContas = parseFloat(document.getElementById("despesasContas").value);
+            var despesasFuncionarios = parseFloat(document.getElementById("despesasFuncionarios").value);
+
+            // Calcular despesas totais
+            var despesasTotal = despesasMateriais + despesasAluguel + despesasContas + despesasFuncionarios;
+
+            // Valor aleatório para ganhos (apenas para exemplo)
+            var ganhos = 5000;
+
+            // Calcular lucro
+            var lucro = ganhos - despesasTotal;
+
+            // Exibir o lucro
+            document.getElementById("lucro").innerText = "Lucro: R$ " + lucro.toFixed(2);
+
+            // Criar gráfico de linhas
+            var ctx = document.getElementById('grafico').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Ganhos', 'Despesas Materiais', 'Despesas Aluguel', 'Despesas Contas', 'Despesas Funcionários', 'Despesas Totais', 'Lucro'],
+                    datasets: [{
+                        label: 'Financeiro',
+                        data: [ganhos, despesasMateriais, despesasAluguel, despesasContas, despesasFuncionarios, despesasTotal, lucro],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(54, 235, 123, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(54, 235, 123, 1)'
+                        ],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-4">Financeiro</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="despesasMateriais">Despesas Materiais:</label>
+                <input type="number" id="despesasMateriais" step="0.01" class="form-control"><br>
+
+                <label for="despesasAluguel">Despesas de Aluguel:</label>
+                <input type="number" id="despesasAluguel" step="0.01" class="form-control"><br>
+
+                <label for="despesasContas">Despesas de Contas:</label>
+                <input type="number" id="despesasContas" step="0.01" class="form-control"><br>
+
+                <label for="despesasFuncionarios">Despesas de Funcionários:</label>
+                <input type="number" id="despesasFuncionarios" step="0.01" class="form-control"><br>
+            </div>
+        </div>
+        
+        <button onclick="calcularLucro()" class="btn btn-primary mt-3">Calcular</button>
+        
+        <p id="lucro" class="mt-3"></p>
+
+        <div class="row mt-5">
+            <div class="col">
+                <canvas id="grafico"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

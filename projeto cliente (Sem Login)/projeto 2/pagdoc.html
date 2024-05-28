@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento de Autorização</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        p {
+            margin-bottom: 30px;
+            color: #666;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-transform: uppercase;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Documento de Autorização</h1>
+        <p>Este documento é uma autorização para que <span id="nome-tatuado"></span> seja tatuado, sendo menor de 16 anos. Por favor, preencha os campos abaixo:</p>
+        <form action="#" id="formulario-assinatura">
+            <label for="nome-responsavel">Nome do Responsável:</label>
+            <input type="text" id="nome-responsavel" name="nome-responsavel" required>
+
+            <label for="documento-identidade">Documento de Identidade do Responsável:</label>
+            <input type="text" id="documento-identidade" name="documento-identidade" required>
+
+            <a class="btn btn-outline-success" href="pag.html"><button type="button">Assinar Documento</a>
+            <a class="btn btn-outline-success" href="pagcliente/projeto cliente -18/projeto 2/pag.html"><button type="button">Tenho +18 anos</a>
+        </form>      
+    </div>
+    
+    
+
+    <script>
+        function exibirNomeTatuado() {
+            var nomeTatuado = "Nome do Tatuado";
+            document.getElementById("nome-tatuado").textContent = nomeTatuado;
+        }
+        exibirNomeTatuado();
+
+        document.getElementById("formulario-assinatura").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("O documento foi assinado com sucesso!");
+        });
+    </script>
+</body>
+</html>

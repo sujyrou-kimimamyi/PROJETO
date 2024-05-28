@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Horários</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .available {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .reserved {
+            background-color: #ff0000;
+            color: white;
+            cursor: not-allowed;
+        }
+        .available a {
+            color: white;
+            text-decoration: none;
+        }
+        .available a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function reserve(element) {
+            element.innerHTML = "Reservado";
+            element.className = "reserved";
+            element.onclick = null; // Remove o evento de clique
+            alert("Reserva confirmada! Você será direcionado para o WhatsApp.");
+        }
+    </script>
+</head>
+<body>
+    <h2>Reserva de Horários</h2>
+    <p>Selecione um horário disponível para fazer sua reserva:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Mês</th>
+          <th>Dia</th>
+          <th>Dia da semana</th>
+          <th>09:00</th>
+          <th>10:00</th>
+          <th>11:00</th>
+          <th>12:00</th>
+          <th>13:00</th>
+          <th>14:00</th>
+          <th>15:00</th>
+          <th>16:00</th>
+          <th>17:00</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Exemplo para o mês de Maio -->
+        <tr>
+          <td>Maio</td>
+          <td>13</td>
+          <td>Segunda-Feira</td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2009:00" target="_blank">Disponível</a></td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2010:00" target="_blank">Disponível</a></td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2011:00" target="_blank">Disponível</a></td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2012:00" target="_blank">Disponível</a></td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2013:00" target="_blank">Disponível</a></td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2014:00" target="_blank">Disponível</a></td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2015:00" target="_blank">Disponível</a></td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2016:00" target="_blank">Disponível</a></td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2017:00" target="_blank">Disponível</a></td>
+        </tr>
+        <tr>
+          <td>Maio</td>
+          <td>14</td>
+          <td>Terça-Feira</td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2009:00" target="_blank">Disponível</a></td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2010:00" target="_blank">Disponível</a></td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2011:00" target="_blank">Disponível</a></td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2012:00" target="_blank">Disponível</a></td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2013:00" target="_blank">Disponível</a></td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2014:00" target="_blank">Disponível</a></td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2015:00" target="_blank">Disponível</a></td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2016:00" target="_blank">Disponível</a></td>
+          <td class="available" onclick="reserve(this)"><a href="https://wa.me/SEU_NUMERO_DE_TELEFONE?text=Gostaria%20de%20reservar%20o%20horário%20das%2017:00" target="_blank">Disponível</a></td>
+        </tr>
+      </tbody>
+    </table>
+</body>
+</html>

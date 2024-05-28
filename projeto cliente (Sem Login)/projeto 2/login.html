@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      width: 320px;
+    }
+
+    .container h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .form-group button:hover {
+      background-color: #0056b3;
+    }
+
+    .form-group .sign-up-link {
+      text-align: center;
+    }
+
+    .form-group .sign-up-link a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .form-group .sign-up-link a:hover {
+      text-decoration: underline;
+    }
+    
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .button-container {
+            text-align: center;
+        }
+        .button-container button {
+            background-color: #007bff; /* azul */
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+    
+  </style>
+  <script>
+    function validarLogin() {
+      var email = document.getElementById('email').value;
+      var senha = document.getElementById('senha').value;
+
+      // Verifica se o campo de email está vazio
+      if (email === '') {
+        alert('Por favor, digite seu email.');
+        return false;
+      }
+
+      // Verifica se o campo de senha está vazio
+      if (senha === '') {
+        alert('Por favor, digite sua senha.');
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</head>
+<body>
+
+  
+  <div class="container">
+    <h2>Login</h2>
+    <form action="loginprocess.php" method="POST"></form>
+    <form id="login-form">
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        
+       
+          <a class="btn btn-outline-success" href="pagcliente/projeto cliente -18/projeto 2/pag.html"><button type="button">Logar</a>
+      
+    
+      </div>
+      <div class="button-container">
+        <button onclick="window.location.href='chave-acesso.html'">Sou Tatuador</button>
+    </div>
+      <div class="form-group sign-up-link">
+        Não tem uma conta? <a href="signup.html">Sign Up</a>
+      </div>
+    </form>
+    <p>Ao fazer login, você concorda com nossos <a href="termosdeuso.html">Termos de Uso</a> e <a href="politicadeprivacidade.html">Política de Privacidade</a>.</p>
+  </div>
+  <!-- Script para redirecionar para a página de signup após 5 segundos -->
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function() {
+      window.location.href = 'paginahome.html';
+    });
+  </script>
+   
+</body>
+</html>

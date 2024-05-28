@@ -1,0 +1,96 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(to right, #333, #222);
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffd700;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+.banner {
+    text-align: center;
+    padding: 100px 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%), url('tattoo-bg.jpg');
+    background-size: cover;
+    color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.banner h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    padding: 50px 0;
+}
+
+footer {
+    background: linear-gradient(to right, #333, #222);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+footer p {
+    margin: 0;
+}
